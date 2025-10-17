@@ -1,0 +1,459 @@
+/* ==========================================
+   Responsive Design - Mobile First
+========================================== */
+
+/* Large Tablets & Desktops (1024px and up) */
+@media (min-width: 1024px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    .section-title {
+        font-size: 3rem;
+    }
+    
+    .cost-amount {
+        font-size: 5rem;
+    }
+}
+
+/* Tablets (768px to 1023px) */
+@media (max-width: 1023px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    .dual-approach {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .approach-connector {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .problems-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* Mobile Devices (767px and below) */
+@media (max-width: 767px) {
+    :root {
+        --section-padding: 60px 0;
+        --container-padding: 0 15px;
+    }
+    
+    /* Fixed CTA Button - Mobile Optimization */
+    .fixed-cta {
+        position: fixed;
+        top: auto;
+        bottom: 20px;
+        right: 15px;
+        left: 15px;
+        z-index: 1000;
+        flex-direction: row;
+        gap: 10px;
+    }
+    
+    .cta-btn-fixed {
+        width: 50%;
+        justify-content: center;
+        padding: 15px 10px;
+        font-size: 0.85rem;
+        border-radius: 10px;
+    }
+    
+    /* Typography - Mobile */
+    .hero-title {
+        font-size: 2.2rem;
+        line-height: 1.1;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Hero Section - Mobile */
+    .hero-section {
+        padding: 80px 0 60px;
+    }
+    
+    .price-comparison {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.5rem;
+        margin: 2rem 0;
+    }
+    
+    .price-arrow {
+        transform: rotate(90deg);
+    }
+    
+    .highlight-price {
+        font-size: 2.5rem;
+    }
+    
+    .price-before .strikethrough {
+        font-size: 1.5rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .hero-cta .cta-btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    /* Problems Section - Mobile */
+    .problems-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .problem-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+    
+    .problem-icon {
+        margin: 0 auto;
+    }
+    
+    .problem-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Solution Section - Mobile */
+    .dual-approach {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .approach-item {
+        padding: 2rem 1.5rem;
+    }
+    
+    .approach-connector {
+        transform: rotate(90deg);
+        margin: 0.5rem 0;
+    }
+    
+    .gear-animation {
+        gap: 5px;
+    }
+    
+    .gear-animation i {
+        font-size: 1.5rem;
+    }
+    
+    /* Features Section - Mobile */
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .feature-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .feature-number {
+        left: 1.5rem;
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+    
+    /* Cost Section - Mobile */
+    .cost-highlight {
+        padding: 2rem 1.5rem;
+    }
+    
+    .cost-amount {
+        font-size: 3rem;
+    }
+    
+    .cost-details {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .benefit-item {
+        justify-content: center;
+    }
+    
+    /* Testimonials - Mobile */
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .testimonial-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .testimonial-quote p {
+        font-size: 1rem;
+    }
+    
+    /* CTA Section - Mobile */
+    .cta-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .cta-title .warning {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .cta-buttons {
+        gap: 1rem;
+    }
+    
+    .cta-buttons .cta-btn {
+        min-width: auto;
+        width: 100%;
+        padding: 18px 20px;
+        font-size: 1rem;
+    }
+    
+    /* Footer - Mobile */
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    /* Button Responsive Adjustments */
+    .cta-btn {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .cta-btn.large {
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+}
+
+/* Extra Small Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .cost-amount {
+        font-size: 2.5rem;
+    }
+    
+    .cta-title {
+        font-size: 1.5rem;
+    }
+    
+    .cta-title .warning {
+        font-size: 1.8rem;
+    }
+    
+    .price-comparison {
+        padding: 1rem;
+    }
+    
+    .hero-cta {
+        margin-top: 1.5rem;
+        gap: 0.8rem;
+    }
+    
+    .hero-cta .cta-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .highlight-price {
+        font-size: 2rem;
+    }
+    
+    .problem-item,
+    .feature-card,
+    .testimonial-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .approach-item {
+        padding: 1.5rem 1rem;
+    }
+    
+    .cost-highlight {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* ==========================================
+   Landscape Mobile Optimization
+========================================== */
+@media (max-width: 767px) and (orientation: landscape) {
+    .hero-section {
+        padding: 60px 0 40px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .price-comparison {
+        flex-direction: row;
+        margin: 1.5rem 0;
+    }
+    
+    .price-arrow {
+        transform: rotate(0deg);
+    }
+    
+    .fixed-cta {
+        bottom: 10px;
+        right: 10px;
+        left: auto;
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .cta-btn-fixed {
+        width: auto;
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* ==========================================
+   Print Styles
+========================================== */
+@media print {
+    .fixed-cta,
+    .cta-buttons,
+    .hero-cta {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .hero-section,
+    .cost-section,
+    .cta-section {
+        background: white;
+        color: black;
+    }
+    
+    .section-title,
+    .hero-title {
+        color: black;
+    }
+}
+
+/* ==========================================
+   Accessibility Enhancements
+========================================== */
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-blue: #000080;
+        --accent-orange: #ff4500;
+        --warning-red: #cc0000;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .gear-animation i {
+        animation: none;
+    }
+    
+    .emphasis::after {
+        animation: none;
+    }
+    
+    .cta-btn-fixed {
+        animation: none;
+    }
+    
+    .price-arrow i {
+        animation: none;
+    }
+}
+
+/* Focus Visible for Better Keyboard Navigation */
+.cta-btn:focus-visible,
+.footer-links a:focus-visible {
+    outline: 3px solid var(--accent-yellow);
+    outline-offset: 2px;
+}
+
+/* ==========================================
+   Touch Device Optimizations
+========================================== */
+@media (hover: none) and (pointer: coarse) {
+    .cta-btn {
+        min-height: 48px; /* Minimum touch target size */
+        font-size: 1rem;
+    }
+    
+    .problem-item:hover,
+    .feature-card:hover,
+    .testimonial-card:hover {
+        transform: none; /* Disable hover effects on touch devices */
+    }
+    
+    .cta-btn:hover {
+        transform: none;
+    }
+    
+    /* Larger tap targets for mobile */
+    .footer-links a {
+        padding: 10px;
+        margin: -10px;
+    }
+}
