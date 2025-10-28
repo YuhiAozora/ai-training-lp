@@ -536,6 +536,36 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // ==========================================
+    // カリキュラムタブ機能
+    // ==========================================
+    function initCurriculumTabs() {
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.curriculum-content');
+        
+        if (tabButtons.length === 0 || tabContents.length === 0) return;
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+                
+                // 全てのタブボタンとコンテンツを非アクティブにする
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // クリックされたタブボタンとコンテンツをアクティブにする
+                button.classList.add('active');
+                const targetContent = document.getElementById(`${targetTab}-content`);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+                
+                // タブ切り替え追跡
+                trackCTAClick(`Tab: ${button.textContent.trim()}`, targetTab);
+            });
+        });
+    }
+
+    // ==========================================
     // 初期化実行
     // ==========================================
     initSmoothScroll();
@@ -544,6 +574,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initUrgencyTimer();
     initExitIntentPopup();
     initFormEnhancements();
+    initCurriculumTabs();
     
     console.log('タクシー広告LP JavaScript 初期化完了');
 });
