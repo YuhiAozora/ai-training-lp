@@ -699,3 +699,400 @@ body {
 .mt-2 { margin-top: 1rem; }
 .mt-3 { margin-top: 1.5rem; }
 .mt-4 { margin-top: 2rem; }
+
+/* ==========================================
+   Curriculum Section
+========================================== */
+.curriculum-section {
+    padding: var(--section-padding);
+    background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--dark-gray);
+    margin-bottom: 3rem;
+    font-weight: var(--font-weight-medium);
+}
+
+/* タブナビゲーション */
+.curriculum-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.tab-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 15px 30px;
+    background: var(--white);
+    border: 2px solid var(--medium-gray);
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--dark-gray);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(26, 54, 93, 0.3);
+}
+
+.tab-btn:hover:not(.active) {
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+.tab-btn i {
+    font-size: 1.2rem;
+}
+
+/* カリキュラムコンテンツ */
+.curriculum-content {
+    display: none;
+}
+
+.curriculum-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.curriculum-overview {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.curriculum-overview h3 {
+    font-size: 1.8rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.curriculum-overview p {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+    line-height: 1.6;
+}
+
+/* AIアカデミー カリキュラムグリッド */
+.curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.curriculum-category {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease;
+}
+
+.curriculum-category:hover {
+    transform: translateY(-5px);
+}
+
+.category-header {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: var(--white);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.category-number {
+    position: absolute;
+    top: -10px;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    background: var(--accent-orange);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--font-weight-black);
+    font-size: 1.1rem;
+}
+
+.category-header h4 {
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.video-count {
+    font-size: 0.9rem;
+    color: var(--accent-yellow);
+    font-weight: var(--font-weight-medium);
+}
+
+.category-content {
+    padding: 1.5rem;
+}
+
+.category-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.category-content li {
+    color: var(--dark-gray);
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.category-content li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--accent-orange);
+    font-size: 0.8rem;
+}
+
+/* AIブートキャンプ カリキュラム */
+.bootcamp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.bootcamp-ability {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.bootcamp-ability:hover {
+    transform: translateY(-5px);
+}
+
+.ability-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--accent-orange), #ff8c42);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.ability-icon i {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.bootcamp-ability h4 {
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+}
+
+.bootcamp-ability p {
+    color: var(--dark-gray);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.workshop-format {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: var(--light-gray);
+    border-radius: 8px;
+}
+
+.format-tag {
+    font-size: 0.8rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.workshop-format span:last-child {
+    font-size: 0.9rem;
+    color: var(--dark-gray);
+    font-weight: var(--font-weight-medium);
+}
+
+/* ブートキャンプ特別プログラム */
+.bootcamp-special-features {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-bottom: 3rem;
+}
+
+.bootcamp-special-features h4 {
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-blue);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.special-program-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.special-program-item {
+    background: linear-gradient(135deg, var(--light-gray), var(--white));
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--accent-orange);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.special-program-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.program-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--accent-orange), #ff8c42);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.program-icon i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.special-program-item h5 {
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.program-subtitle {
+    font-size: 1rem;
+    color: var(--accent-orange);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.program-features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.program-features li {
+    color: var(--dark-gray);
+    margin-bottom: 0.8rem;
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+}
+
+.program-features li::before {
+    content: '✨';
+    position: absolute;
+    left: 0;
+    font-size: 0.9rem;
+}
+
+/* カリキュラムCTA */
+.curriculum-cta {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.curriculum-cta .cta-text {
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-medium);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.curriculum-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .curriculum-tabs {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+    
+    .curriculum-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .bootcamp-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .special-program-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .curriculum-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .curriculum-buttons .cta-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
